@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TSP Solver</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h2 { color: #2c3e50; }
+        textarea { font-family: monospace; }
+        select, button { padding: 5px; margin-top: 10px; }
+        button { cursor: pointer; background-color: #3498db; color: white; border: none; }
+        button:hover { background-color: #2980b9; }
+        #result { margin-top: 20px; white-space: pre-line; }
+    </style>
+</head>
+<body>
+
+<h2>TSP Solver</h2>
+
+<label>Enter Coordinates (x,y per line):</label><br>
+<textarea id="coords" rows="6" cols="30">0,0
+2,3
+5,2
+6,6</textarea>
+
+<br>
+
+<label>Select Algorithm:</label>
+<select id="algo">
+    <option value="NN">Nearest Neighbour</option>
+    <option value="BRUTE">Brute Force</option>
+    <option value="DP">Dynamic Programming</option>
+</select>
+
+<br><br>
+<button onclick="solve()">Solve</button>
+
+<h3 id="result"></h3>
+
+<script src="script.js"></script>
+</body>
+</html>
